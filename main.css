@@ -1,0 +1,58 @@
+div.game{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+div{
+    padding: 50px;
+    font-size: larger;
+    text-align: center;
+    font-family: "VT323", "sans-serif";
+}
+
+
+
+.stats{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 100px;
+    margin-top: 0px;
+    font-size: 32px;
+}
+.stats div{
+    margin-left: 75px;
+    margin-right: 75px;
+}
+div.hunger{
+    color: #9a9996;
+}
+div.sleep{
+    color: #757470;
+}
+div.fun{
+    color: #4e4d4b;
+}
+
+
+
+div.thing{
+    display: flex;
+    align-items: center;
+}
+
+
+
+div.controls{
+    display: flex;
+    margin: 100px;
+    font-size: 32px;
+}
+div.bttn1{
+    grid-area: bttn1;
+}
+div.bttn2{
+    grid-area: bttn2;
+}
+div.bttn3{
+    grid-area: bttn3;
+}
