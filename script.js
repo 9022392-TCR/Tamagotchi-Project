@@ -2,6 +2,9 @@ let hunger = 100;
 let sleep = 100;
 let fun = 100;
 
+document.getElementById("music").loop = true;
+document.getElementById("music").play();
+
 document.getElementById("stat1").innerHTML = hunger;
 document.getElementById("stat2").textContent = sleep;
 document.getElementById("stat3").textContent = fun;
@@ -11,9 +14,9 @@ if (hunger === 70){
 }
 
 function statUpdate(){
-    document.getElementById(stat1).textContent = hunger;
-    document.getElementById(stat2).textContent = sleep;
-    document.getElementById(stat3).textContent = fun;
+    document.getElementById("stat1").textContent = hunger;
+    document.getElementById("stat2").textContent = sleep;
+    document.getElementById("stat3").textContent = fun;
 }
 
 
@@ -41,7 +44,7 @@ function play(){
     statUpdate()
 }
 
-document.getElementById(chat).innerHTML = "hello world";
+document.getElementById("chat").innerHTML = "hello world";
 
 setInterval(time, 3000);
 function time(){
