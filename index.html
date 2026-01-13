@@ -6,21 +6,28 @@
     <title>Tamagotchi</title>
     <link rel="stylesheet" href="main.css">
     <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="game">
         <div class="stats">
-            <div class="hunger">HUNGER:100</div>
-            <div class="sleep">SLEEP:100</div>
-            <div class="fun">FUN:100</div>
+            <div class="hunger">HUNGER
+                <div id="stat1"></div></div>
+            <div class="sleep">SLEEP
+                <div id="stat2"></div></div>
+            <div class="fun">FUN
+                <div id="stat3"></div></div>
+            <div class="age">AGE
+                <div id="age">0</div></div>
         </div>
         <div class="thing"><img src="sprites/tamagotchi.png" alt="Tamagotchi" width="128px"></div>
+        <div id="chat"></div>
         <div class=controls>
-            <div class="bttn1">FEED</div>
-            <div class="bttn2">NAP</div>
-            <div class="bttn3">PLAY</div>
+            <div class="bttn1" onclick="feed()">FEED</div>
+            <div class="bttn2" onclick="nap()">NAP</div>
+            <div class="bttn3" onclick="play()">PLAY</div>
         </div>
     </div>
+
+<script src="script.js"></script>
 </body>
 </html>

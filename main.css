@@ -4,7 +4,7 @@ div.game{
     flex-flow: column nowrap;
 }
 div{
-    padding: 50px;
+    padding: 25px;
     font-size: larger;
     text-align: center;
     font-family: "VT323", "sans-serif";
