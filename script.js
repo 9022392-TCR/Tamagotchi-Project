@@ -5,19 +5,17 @@ let fun = 100;
 document.getElementById("music").loop = true;
 document.getElementById("music").play();
 
-document.getElementById("stat1").innerHTML = hunger;
-document.getElementById("stat2").textContent = sleep;
-document.getElementById("stat3").textContent = fun;
-
-if (hunger === 70){
-    document.getElementById(chat).innerHTML = "feed me";
-}
-
 function statUpdate(){
     document.getElementById("stat1").textContent = hunger;
     document.getElementById("stat2").textContent = sleep;
     document.getElementById("stat3").textContent = fun;
 }
+statUpdate();
+
+if (hunger === 70){
+    document.getElementById('chat').innerHTML = "feed me";
+}
+
 
 
 function feed(){
@@ -55,4 +53,3 @@ function time(){
 
     statUpdate()
 }
-console.log(hunger)

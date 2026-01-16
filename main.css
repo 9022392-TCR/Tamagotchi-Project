@@ -48,11 +48,5 @@ div.controls{
     font-size: 32px;
 }
 div.bttn1{
-    grid-area: bttn1;
-}
-div.bttn2{
-    grid-area: bttn2;
-}
-div.bttn3{
-    grid-area: bttn3;
+    color: black;
 }
