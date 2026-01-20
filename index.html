@@ -10,16 +10,25 @@
 <body>
     <div class="game">
         <div class="stats">
-            <div class="hunger">HUNGER
-                <div id="stat1"></div></div>
-            <div class="sleep">SLEEP
-                <div id="stat2"></div></div>
-            <div class="fun">FUN
-                <div id="stat3"></div></div>
-            <div class="age">AGE
-                <div id="age">0</div></div>
+            <div class="hunger">
+                <div>HUNGER</div>
+                <div class="num" id="stat1"></div>
+            </div>
+            <div class="sleep">
+                <div>SLEEP</div>
+                <div class="num" id="stat2"></div>
+            </div>
+            <div class="fun">
+                <div>FUN</div>
+                <div class="num" id="stat3"></div>
+            </div>
+            <div class="age">
+                <div>AGE</div>
+                <div class="num" id="age">0</div>
+            </div>
         </div>
-        <div class="thing" ><img src="sprites/tamagotchi.png" id="entity" alt="Happy" width="128px"></div>
+        <div class="msg" id="end"></div>
+        <div class="thing" ><img src="sprites/tamagotchi.png" id="entity" alt="Tamagotchi" width="128px"></div>
         <div id="chat"></div>
         <div class=controls>
             <div class="bttn" onclick="feed()">FEED</div>

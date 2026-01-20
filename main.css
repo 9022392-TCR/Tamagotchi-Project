@@ -21,11 +21,10 @@ div{
     margin: 100px;
     margin-top: 0px;
     font-size: 32px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
-.stats div{
-    margin-left: 75px;
-    margin-right: 75px;
-}
+
 div.hunger{
     color: #9a9996;
 }
@@ -35,9 +34,15 @@ div.sleep{
 div.fun{
     color: #4e4d4b;
 }
+.num{
+    padding: 0px;
+    margin: 0px;
+}
 
 
-
+div.msg{
+    font-size: 128px;
+}
 div.thing{
     display: flex;
     align-items: center;

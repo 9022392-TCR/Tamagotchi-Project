@@ -53,20 +53,32 @@ function play(){
     statUpdate()
 }
 
-setInterval(time, 3000);
-function time(){
+setInterval(gameover, 100)
+function gameover(){
     if (fun == 0){
         game = false;
     }if (hunger == 0){
-        game == false;
+        game = false;
     }if (sleep == 0){
-        game == false;
+        game = false;
     }
+}
 
+setInterval(time, 3000);
+function time(){
     if (game === true){
         hunger -= 1;
         sleep -= 1;
         fun -= 1;
+
+        statUpdate()
+    }
+}
+
+setInterval(age, 60000);
+function age(){
+    if (game === true){
+        age += 1;
 
         statUpdate()
     }
@@ -78,28 +90,63 @@ let emote = 0;
 
 setInterval(exp, 100);
 function exp(){
-    if (hunger <= 70){
-        if (hunger <= 30){
-            c.textContent = thoughts[4];
+    if (game === true){
+        if (hunger <= 70){
+            if (hunger <= 30){
+                c.textContent = thoughts[4];
+                emote = 4;
+           }else{
+            c.textContent = thoughts[1];
+            emote = 1;
+            }
+        }else if(fun <= 70){
+            if (fun <= 30){
+                c.textContent = thoughts[4];
+                emote = 4;
+            }else{
+            c.textContent = thoughts[2];
+            emote = 2;
+            }
+        }else if (sleep <= 70){
+            if (sleep <= 30){
+                c.textContent = thoughts[4]
+                emote = 4;
+            }else{
+            c.textContent = thoughts[3];
+            emote = 3;
+            }
         }else{
-        c.textContent = thoughts[1];
-        
-        }
-    }else if(fun <= 70){
-        if (fun <= 30){
-            c.textContent = thoughts[4]
-        }else{
-        c.textContent = thoughts[2];
-        }
-    }else if (sleep <= 70){
-        if (sleep <= 30){
-            c.textContent = thoughts[4]
-        }else{
-        c.textContent = thoughts[3];
+            c.textContent = thoughts[0];
+            emote = 0;
         }
     }else{
-        c.textContent = thoughts[0];
-        c.src = 'sprites/tamagotchi.png';
+        emote = 5;
     }
 }
 
+setInterval(feel, 100);
+function feel(){
+    switch(emote){
+        case 1:
+            e.src = "sprites/tamagotchiHungry.png";
+            break;
+        case 2:
+            e.src = "sprites/tamagotchiBored.png";
+            break;
+        case 3:
+            e.src = "sprites/tamagotchiSleepy.png";
+            break;
+        case 4:
+            e.src = "sprites/tamagotchiSad.png";
+            break;
+        case 5:
+            c.textContent = "";
+            e.src = "";
+            e.alt = "";
+            document.getElementById("end").textContent = "GAME OVER";
+            break;
+        default:
+            e.src = "sprites/tamagotchi.png";
+            break;
+    }
+}
