@@ -28,9 +28,12 @@ statUpdate();
 function feed(){
     if (game == true){
     hunger += 20;
+    sleep -= 10;
     }
     if (hunger > 100){
         hunger = 100;
+    }if (sleep < 0){
+        sleep = 0;
     }
     statUpdate()
 }
@@ -38,9 +41,12 @@ function feed(){
 function nap(){
     if (game == true){
     sleep += 20;
+    fun -= 10;
     }
     if (sleep > 100){
-        sleep = 100
+        sleep = 100;
+    }if (fun < 0){
+        fun = 0;
     }
     statUpdate()
 }
@@ -48,9 +54,12 @@ function nap(){
 function play(){
     if (game == true){
         fun += 20;
+        hunger -= 10;
     }
     if (fun > 100){
         fun = 100;
+    }if (hunger < 0){
+        hunger = 0;
     }
     statUpdate()
 }
