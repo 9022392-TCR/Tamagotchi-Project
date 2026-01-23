@@ -6,6 +6,7 @@ div.game{
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
+    padding-bottom: 0px;
 }
 div{
     padding: 25px;
@@ -18,7 +19,7 @@ div{
 .stats{
     display: flex;
     flex-flow: row nowrap;
-    margin: 100px;
+    margin: 50px;
     margin-top: 0px;
     font-size: 32px;
     margin-left: 100px;
@@ -52,8 +53,10 @@ div.thing{
 
 div.controls{
     display: flex;
-    margin: 100px;
+    margin: 50px;
     font-size: 32px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 div.bttn1{
     color: black;
