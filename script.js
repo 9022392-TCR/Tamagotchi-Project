@@ -1,4 +1,5 @@
 let game = true;
+let act = false;
 
 let hunger = 100;
 let sleep = 100;
@@ -101,11 +102,11 @@ let emote = 0;
 
 setInterval(exp, 100);
 function exp(){
-    if (game === true){
+    if (game === true && act === false){
         if (hunger <= 70){
             if (hunger <= 30){
                 c.textContent = thoughts[4];
-                emote = 4;
+                emote = 2;
            }else{
             c.textContent = thoughts[1];
             emote = 1;
@@ -113,25 +114,25 @@ function exp(){
         }else if(fun <= 70){
             if (fun <= 30){
                 c.textContent = thoughts[4];
-                emote = 4;
+                emote = 2;
             }else{
             c.textContent = thoughts[2];
-            emote = 2;
+            emote = 1;
             }
         }else if (sleep <= 70){
             if (sleep <= 30){
                 c.textContent = thoughts[4]
-                emote = 4;
+                emote = 2;
             }else{
             c.textContent = thoughts[3];
-            emote = 3;
+            emote = 1;
             }
         }else{
             c.textContent = thoughts[0];
             emote = 0;
         }
-    }else{
-        emote = 5;
+    }else if (game === false){
+        emote = 99;
     }
 }
 
@@ -139,18 +140,24 @@ setInterval(feel, 100);
 function feel(){
     switch(emote){
         case 1:
-            e.src = "sprites/tamagotchiHungry.png";
-            break;
-        case 2:
             e.src = "sprites/tamagotchiBored.png";
             break;
-        case 3:
-            e.src = "sprites/tamagotchiSleepy.png";
-            break;
-        case 4:
+        case 2:
             e.src = "sprites/tamagotchiSad.png";
             break;
+        case 3:
+            e.src = "sprites/tamagotchiNap.png";
+            break;
+        case 4:
+            e.src = "sprites/tamagotchiPlay.png";
+            break;
         case 5:
+            e.src = "sprites/tamagotchiFeed.png";
+            break;
+        case 6:
+            e.src = "sprites/tamagotchiSad2.png";
+            break;
+        case 99:
             c.textContent = "";
             e.src = "";
             e.alt = "";
