@@ -1,5 +1,6 @@
 body{
     font-family: "VT323", "sans-serif";
+    background-color: rgb(119, 207, 215) ;
 }
 
 div.game{
@@ -27,13 +28,16 @@ div{
 }
 
 div.hunger{
-    color: #9a9996;
+    color: #ee0505;
 }
 div.sleep{
-    color: #757470;
+    color: #0d09eb;
 }
 div.fun{
-    color: #4e4d4b;
+    color: #ffea03;
+}
+div.age{
+    color:rgb(24, 149, 24) 
 }
 .num{
     padding: 0px;
