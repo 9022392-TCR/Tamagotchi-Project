@@ -140,10 +140,18 @@ setInterval(feel, 100);
 function feel(){
     switch(emote){
         case 1:
-            e.src = "sprites/tamagotchiBored.png";
+            if(age >= 20){
+                e.src = "sprites/tamagotchiBored2.png"
+            }else{
+                e.src = "sprites/tamagotchiBored.png";
+            }
             break;
         case 2:
-            e.src = "sprites/tamagotchiSad.png";
+            if(age >= 20){
+                e.src = "sprites/tamagotchiSad3.png"
+            }else{
+                e.src = "sprites/tamagotchiSad.png";
+            }
             break;
         case 3:
             e.src = "sprites/tamagotchiNap.png";
@@ -164,7 +172,11 @@ function feel(){
             document.getElementById("end").textContent = "GAME OVER";
             break;
         default:
-            e.src = "sprites/tamagotchi.png";
+            if(age >= 20){
+                e.src = "sprites/tamagotchi2.png";
+            }else{
+                e.src = "sprites/tamagotchi.png";
+            }
             break;
     }
 }
