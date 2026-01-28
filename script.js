@@ -93,7 +93,7 @@ function time(){
     }
 }
 
-setInterval(aging, 60000);
+setInterval(aging, 10000);
 function aging(){
     if (game === true){
         age += 1;
