@@ -30,6 +30,8 @@ function feed(){
     if (game == true){
     hunger += 20;
     sleep -= 10;
+    document.getElementById("action").src = "sprites/pizza.png"
+    setTimeout(() => {document.getElementById("action").src = ""}, 2500)
     }
     if (hunger > 100){
         hunger = 100;
@@ -43,6 +45,8 @@ function nap(){
     if (game == true){
     sleep += 20;
     fun -= 10;
+    document.getElementById("action").src = "sprites/sleep-1.png"
+    setTimeout(() => {document.getElementById("action").src = ""}, 2500)
     }
     if (sleep > 100){
         sleep = 100;
@@ -56,6 +60,8 @@ function play(){
     if (game == true){
         fun += 20;
         hunger -= 10;
+        document.getElementById("action").src = "sprites/Untitled Project - -4.png"
+        setTimeout(() => {document.getElementById("action").src = ""}, 2500)
     }
     if (fun > 100){
         fun = 100;
@@ -180,3 +186,4 @@ function feel(){
             break;
     }
 }
+
